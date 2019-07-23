@@ -1,0 +1,6 @@
+#divider{
+    background-color: gray;
+    height: 100%;
+    width: 2px;
+  border: 2px solid gray;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog-Post</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<style>
+  #divider{
+    background-color: gray;
+    min-height: 400px;
+    width : 1px;
+    height: 100%;
+}
+  </style>
+</head>
+<body> 
+   <div class="container">
+     <div class="row m-5">  
+       <div class="col-4">
+        <ul class="nav flex-column">
+             <li class="nav-item">
+               <a class="nav-link" href="/add">Add</a>
+             </li>
+                {{!-- <li class="nav-item">
+                  <a class="nav-link active" href="#">Home</a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Blog1</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Blog2</a>
+                 </li> --}}
+                 
+                {{#each blogs as |b|}}
+                  <li class="nav-item">
+                  <a class="nav-link" href='/?blog={{b._id}}'>{{b.title}}</a>
+                  </li>
+                {{/each}}
+
+               
+            </ul>
+   </div>
+   <div class="col-1" >
+     <div id="divider">
+
+     </div>
+        </div>
+        <div class="col-7">
+     {{#if selected }}
+     <div class="jumbotron">
+            <h1 class="display-4">{{selected.title}}</h1>
+            <hr class="my-4">
+            <p>{{selected.body}}</p>
+          </div>
+     {{!-- <h3>{{selected.title}}</h3>
+     <p>
+       {{selected.body}}
+     </p> --}}
+     {{else}}
+     <div class="jumbotron">
+            <h1 class="display-4">Welcome!</h1>
+            <p class="lead">This is sample blog i made at home. </p>
+            <hr class="my-4">
+            <p>It uses HTML, CSS, Node, Express and Mongo.</p>
+          </div>
+        {{/if}}
+   </div>
+   </div>
+   </div>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ADD BLOG</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+   <a class="nav-link m-3" href="/">Back</a> 
+   <h1 class="m-5">NEW BLOG</h1>
+    <form action="/" method="POST">
+  <div class="form-group m-5">
+    <label for="title">Blog title</label>
+    <input type="text" class="form-control" id="title" name="title" aria-describedby="titlehelp" placeholder="Enter blog title">
+    <small id="titlehelp" class="form-text text-muted">This will be the title of your blog post</small>
+  </div>
+  <div class="form-group m-5">
+    <label for="body">Body</label>
+    <textarea type="text" class="form-control" id="body" name="body" placeholder="Enter the body of blog here."></textarea>
+    <small id="titlehelp" class="form-text text-muted">This will be the body of your blog post</small>
+  </div>
+   <button type="submit" class="btn btn-primary m-5">Submit</button>
+</form>
+    
+</body>
+</html>
